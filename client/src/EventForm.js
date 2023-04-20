@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { postEvents } from "./apiClient";
 
 export default function EventForm(props) {
-
   const [titleText, setTitle] = useState("");
   const [dateTime, setDateTime] = useState("");
   const [description, setDescription] = useState("");
 
+  //onClick submit
   const handleClick = (e) => {
     e.preventDefault();
     if (titleText && dateTime && description) {

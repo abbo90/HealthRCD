@@ -7,12 +7,13 @@ async function getEvents(req, res, next) {
     res.status(200).json(event)
   } catch (err) {
     console.error(err)
-    res.status(500).json({ error: 'Failed to get events' })
+    res.status(500)
+    res.json({ error: 'Failed to get events' })
   }
 }
 
 async function postEvents(req, res, next) {
-  console.log(req.body)
+  // console.log(req.body.title)
   try {
     const newEvent = await new Event({
       title: req.body.title.title,
@@ -22,17 +23,46 @@ async function postEvents(req, res, next) {
     await newEvent.save()
     res.status(201).json(newEvent)
   } catch (err) {
-    console.error(err.message)
-    res.status(500).json({ error: 'Failed to create event' })
+    console.error(err)
+    res.status(500)
+    res.json({ error: 'Failed to create event' })
   }
 }
 
-async function updateEvents() {
+async function updateEvents(req, res, next) {
+  //sconsole.log(req.params.id)
+  try {
+    const updateEvent = await Event.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!updateEvent) {
+      res.status(404)
+      res.json({ error: ' Event Not Found' });
+    }
+    res.status(200)
+    res.json(updateEvent);
+  } catch (err) {
+    res.status(500)
+    res.json({ error: 'Failed to update event' })
+
+  }
 
 }
 
 
-async function deleteEvents() { }
+async function deleteEvents(req, res, next) {
+  try {
+    const deleteEvent = await Event.findByIdAndDelete(req.params.id, req.body)
+    if (!deleteEvent) {
+      res.status(404)
+      res.json({ error: ' Event Not Found' });
+    }
+    res.status(200)
+    res.json({ message: 'Event Deleted' });
+
+  } catch (err) {
+    res.status(500)
+    res.json({ error: 'Failed to delete event' })
+  }
+}
 
 
 

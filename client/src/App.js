@@ -11,6 +11,7 @@ function App() {
   const handleClick = (newEvent) => {
     setEvents(prevEvent => [...prevEvent, newEvent]);
   };
+
   useEffect(() => {
     getEvents().then((data) => {
       setEvents(data);

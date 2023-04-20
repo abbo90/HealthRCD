@@ -1,6 +1,7 @@
 import EventItem from "./EventItem";
 
 export default function EventList({ events }) {
+
   return (
     <>
       <div className="right-container">
