@@ -1,0 +1,165 @@
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  background-image: url('./assetss/wp6938410-health-care-wallpapers.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  z-index: -20;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F6F6F6;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.left-nav {
+  padding-left: 35px;
+  display: flex;
+}
+.left-nav h1 {
+  color: #10ACE0;
+
+}
+.left-nav img {
+  width: 80px;
+  object-fit: contain;
+}
+.right-nav {
+  display: flex;
+  flex-direction: row;
+}
+.right-nav p {
+  margin: 5px;
+  margin-right: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form {
+  margin: 50px;
+  padding: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #cfcccc;
+  border-radius: 20px;
+  background: rgb(9,9,121);
+  background: linear-gradient(90deg, rgba(9,9,121,0.8005253126641282) 0%, rgba(0,212,255,1) 100%);
+  max-width: 450px ;
+}
+.form label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #F6F6F6;
+}
+
+.form input {
+  padding: 15px ;
+  width: 350px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+form textarea {
+  width: 350px;
+  border: 1px solid #ccc;
+  max-width: 380px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.btn button {
+  padding: 15px 80px;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: transparent ;
+  color: #F6F6F6;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+.right-side {
+  margin: 15px;
+  width: 750px;
+  height: 200px;
+  background: white;
+  padding-left: 15px;
+  border-radius: 20px;
+  max-height: fit-content;
+
+}
+.date span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #9a9a9a;
+}
+.events  {
+  overflow: auto;
+  max-height: 150px;
+}
+.events p {
+  margin-top: 5px;
+}
+.events h2 {
+  position: sticky;
+  top: 0;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.right-container h1 {
+ margin: 0;
+ padding: 0;
+ color: #fff;
+ padding-left: 15px;
+}
+.buttons-item {
+padding-top: 5px;
+
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-item button {
+  margin-right: 10px;
+  background-color: #f7b32b;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#first-btn {
+  background-color: #24a0ed;
+}
+.buttons-item button {
+  background-color: red;
+}
+.date {
+padding-top: 20px;
+}
