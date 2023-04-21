@@ -60,7 +60,7 @@ body::before {
   border: 1px solid #cfcccc;
   border-radius: 20px;
   background: rgb(9,9,121);
-  background: linear-gradient(90deg, rgba(9,9,121,0.8005253126641282) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(24, 47, 225, 0.265) 0%, rgba(0, 213, 255, 0) 100%);
   max-width: 450px ;
   position: sticky;
   top: 20px;
@@ -118,12 +118,17 @@ form textarea {
   overflow: auto;
   max-height: 150px;
 }
+.events::-webkit-scrollbar {
+    background: transparent; /* make scrollbar transparent */
+    width: 30px;
+}
 .events p {
-  margin-top: 5px;
+  max-width: 700px;
+  text-align: left;
 }
 .events h2 {
   position: sticky;
-  top: 0;
+  top: 3px;
 }
 
 .right-container {
@@ -131,7 +136,12 @@ form textarea {
   flex-direction: column;
   padding-top: 20px;
   padding-right: 50px;
-
+  position: relative;
+}
+#no-events {
+position: fixed;
+left: 50%;
+top: 15%;
 
 }
 .right-container h1 {
