@@ -19,6 +19,21 @@ const schema = new Schema({
   textarea: String
 });
 
-const Event = mongoose.model('Event', schema, 'events');
+const userSchema = new Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
 
-module.exports = Event;
+})
+
+const Event = mongoose.model('Event', schema, 'events');
+const User = mongoose.model('User', userSchema, 'user');
+
+
+module.exports = { Event, User };
